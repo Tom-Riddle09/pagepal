@@ -1,0 +1,54 @@
+/* Ensure the entire page takes up the full height of the viewport */
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Ensure the body stretches to the full height */
+    font-family: Arial, sans-serif;
+    background-color: #efd2aa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header remains as defined */
+.header {
+    align-items: center;
+    background-color: #d29a40;
+    color: white;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    color: #000;
+}
+
+.header p {
+    text-align: center;
+    color: #411a00;
+    margin: 5px 0 0;
+}
+
+/* Main content should expand to take available space */
+.main-content {
+    flex: 1; /* This pushes the footer to the bottom when content is short */
+    padding: 20px; /* Add some padding for aesthetic spacing */
+}
+
+/* Footer sticks to the bottom */
+.footer {
+    background-color: #d29a40;
+    align-items: center;
+    padding: 10px 20px;
+    color: #000;
+    text-shadow: #333;
+    text-align: center;
+}

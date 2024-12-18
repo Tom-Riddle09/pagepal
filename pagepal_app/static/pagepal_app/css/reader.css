@@ -1,0 +1,79 @@
+/* Basic styling for the reader */
+body {
+    font-family: 'Georgia', serif;
+    background-color:#efd2aa;
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background-color: #efd2aa;
+}
+
+.reader {
+    background-color: #c4a476;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    width: 60%; /* Set the width of the book content */
+    overflow-y: scroll; /* Makes the book content scrollable */
+    line-height: 1.6;
+    position: relative; /* For floating button position */
+}
+
+.reader-controls {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.floating-btn {
+    position: fixed; /* Position the button relative to the reader section */
+    bottom: 20px; /* Bottom-right position */
+    right: 20px;
+    background-color: #cc5500;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.night-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.night-mode .reader {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+
+.night-mode .reader-container {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+
+.night-mode .floating-btn {
+    color: #fff;
+}

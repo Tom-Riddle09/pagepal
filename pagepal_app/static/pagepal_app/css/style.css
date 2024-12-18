@@ -1,0 +1,160 @@
+
+
+h2 {
+    text-align: center;
+    color: #688e24;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-form {
+    text-align: center;
+    color:#d19651;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #cc5500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #a04504;
+}
+
+
+.form {
+    text-align: center;
+}
+
+.form button {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #cc5500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #a04504;
+}
+
+.btn-books {
+    padding: 10px 20px;
+    background-color: #44cc00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-books:hover {
+    background-color: #5aa004;
+}
+
+/* General styling for the section */
+section {
+    padding: 20px;
+}
+
+/* Book container for flexbox layout */
+.book-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items into new rows */
+    gap: 20px; /* Adds spacing between book boxes */
+    justify-content: center; /* Center-aligns the books horizontally */
+}
+
+/* Individual book box */
+.book-box {
+    background-color: #efd2aa;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 20%; /* Adjust to control how many fit per row (approx 4 in a row) */
+    min-width: 200px; /* Ensures consistent size for smaller screens */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Book image styling */
+.book-image {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Book title */
+.book-box h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+/* Author styling */
+.book-box h5 {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Genre styling */
+.book-box h6 {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0 10px;
+}
+
+.book-box h6 span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Button for viewing details */
+.btn-books {
+    padding: 10px 20px;
+    background-color: #44cc00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block; /* Ensures proper spacing */
+    margin-top: 10px;
+}
+
+.btn-books:hover {
+    background-color: #5aa004;
+}
+
+@media (max-width: 768px) {
+    .book-box {
+        width: 45%; /* 2 books per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-box {
+        width: 100%; /* 1 book per row on small screens */
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" href="{% static 'pagepal_app/css/reader.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1>{{ book.title }}</h1>
+    </header>
+    
+    <main class="reader-container">
+        <section class="reader">
+            <div id="book-content">
+                <!-- Render the cleaned HTML content here -->
+                {{ book_content|safe }}
+            </div>
+            <!-- Floating Button -->
+            <button id="theme-toggle" class="floating-btn">Day-Night Mode</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 PagePal.</p>
+    </footer>
+    
+    <script src="{% static 'pagepal_app/js/reader.js' %}"></script>
+</body>
+</html>

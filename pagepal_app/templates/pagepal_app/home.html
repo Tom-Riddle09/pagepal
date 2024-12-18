@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'pagepal_app/css/style.css' %}?v=4">
+<a href="{% url 'upload' %}" class="btn">Donate a Book</a>
+<form method="GET" action="{% url 'home' %}" class="search-form">
+    <input type="text" name="query" placeholder="Search books by title, author, or genre" required>
+    <button type="submit">Search</button>
+</form>
+<section>
+    {% if books %}
+        <h2>Your Library</h2>
+        <div class="book-container">
+
+            {% for book in books %}
+                <div class="book-box">
+                    <img src="https://cdn-icons-png.flaticon.com/128/128/128147.png" alt="Book Image" class="book-image">
+                    <h3>{{ book.title }}</h3>
+                    <h5>By: {{ book.author }}</h5>
+                    <h6>Genre: <span>{{ book.genre }}</span></h6>
+                    <a href="{% url 'reader' book.id %}" class="btn-books">View</a>
+                </div>
+            {% endfor %}
+    {% else %}
+        <h2>Search Results</h2>
+        <p style="text-align: center;">No item matching your search.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
